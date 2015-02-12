@@ -33,7 +33,9 @@ namespace cryptography
         {
             string answer="";
             foreach (char symbol in Text)
-                answer += (char)(((int)symbol - Key+AlphabetLength) % AlphabetLength);
+            {
+                answer += (char)(((int)symbol - Key + AlphabetLength) % AlphabetLength);
+            }
             return answer;
         }
     }

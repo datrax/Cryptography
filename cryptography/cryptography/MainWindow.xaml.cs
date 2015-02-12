@@ -30,6 +30,7 @@ namespace cryptography
                     System.Diagnostics.Debug.WriteLine(file);
                     StreamReader re = new StreamReader(file);
                     encryptedText.Text += re.ReadToEnd();
+                    re.Close();
                 }       
             }
         }
@@ -44,6 +45,7 @@ namespace cryptography
                     System.Diagnostics.Debug.WriteLine(file);
                     StreamReader re = new StreamReader(file);
                     decryptedText.Text += re.ReadToEnd();
+                    re.Close();
                 }
             }
         }
@@ -80,8 +82,7 @@ namespace cryptography
             for (int i = 0; i < cryptographer.AlphabetLength; i++)
             {
                 cryptographer.Key = i;
-                    answer.Append(i+": " +cryptographer.Decrypt()+Environment.NewLine);
-
+                answer.Append(i+": " +cryptographer.Decrypt()+Environment.NewLine);
             }
             File.WriteAllText("Temp.txt", answer.ToString());
             Process.Start("Temp.txt");
