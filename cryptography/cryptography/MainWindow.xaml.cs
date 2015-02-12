@@ -20,7 +20,7 @@ namespace cryptography
             InitializeComponent();        
         }
 
-        private void dropping(object sender, DragEventArgs e)
+        private void DropDefaultText(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             foreach (string file in files)
@@ -30,13 +30,23 @@ namespace cryptography
                     System.Diagnostics.Debug.WriteLine(file);
                     StreamReader re = new StreamReader(file);
                     encryptedText.Text += re.ReadToEnd();
-                }
-            
-                    
+                }       
             }
         }
 
-
+        private void DropEncodedText(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string file in files)
+            {
+                if (file.Substring(file.LastIndexOf('.')) == ".txt")
+                {
+                    System.Diagnostics.Debug.WriteLine(file);
+                    StreamReader re = new StreamReader(file);
+                    decryptedText.Text += re.ReadToEnd();
+                }
+            }
+        }
         public void OnDragOver(object sender, DragEventArgs e)
         {
             e.Effects = DragDropEffects.All;
@@ -104,6 +114,5 @@ namespace cryptography
                 DecryptButton.IsEnabled = false;
             }                       
         }
-
     }
 }

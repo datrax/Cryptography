@@ -19,3 +19,24 @@ C:\Users\datrax\Documents\Visual Studio 2013\Projects\cryptography\cryptography\
 C:\Users\datrax\Documents\Visual Studio 2013\Projects\cryptography\cryptography\obj\Debug\Themes\ShinyBlue.baml
 C:\Users\datrax\Documents\Visual Studio 2013\Projects\cryptography\cryptography\obj\Debug\Themes\ShinyRed.baml
 C:\Users\datrax\Documents\Visual Studio 2013\Projects\cryptography\cryptography\obj\Debug\Themes\WhistlerBlue.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\bin\Debug\cryptography.exe.config
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\cryptography.exe
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\cryptography.pdb
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\bin\Debug\cryptography.exe
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\cryptography.csprojResolveAssemblyReference.cache
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\MainWindow.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\Themes\BureauBlack.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\Themes\BureauBlue.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\Themes\ExpressionDark.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\Themes\ExpressionLight.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\Themes\ShinyBlue.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\Themes\ShinyRed.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\Themes\WhistlerBlue.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\App.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\MainWindow.g.cs
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\App.g.cs
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\cryptography_MarkupCompile.cache
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\cryptography.g.resources
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\cryptography.Properties.Resources.resources
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\cryptography.csproj.GenerateResource.Cache
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\bin\Debug\cryptography.pdb
