@@ -84,7 +84,7 @@ namespace cryptography
                 cryptographer.Key = i;
                 answer.Append(i+": " +cryptographer.Decrypt()+Environment.NewLine);
             }
-            File.WriteAllText("Temp.txt", answer.ToString());
+            File.WriteAllText("Temp.txt", answer.ToString(),Encoding.Unicode);
             Process.Start("Temp.txt");
         }
         private void CheckTheKey(object sender, TextChangedEventArgs e)
