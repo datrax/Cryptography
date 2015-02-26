@@ -17,7 +17,11 @@ namespace cryptography
         Cryptographer cryptographer = new Cezar();
         public MainWindow()
         {
-            InitializeComponent();        
+            InitializeComponent();
+            methodList.Items.Add("Cezar");
+            methodList.Items.Add("Trithemius");
+            methodList.SelectedItem = methodList.Items[0];
+            
         }
 
         private void DropDefaultText(object sender, DragEventArgs e)
@@ -58,7 +62,7 @@ namespace cryptography
         private void Encrypting(object sender, RoutedEventArgs e)
         {
             cryptographer.Text = encryptedText.Text;
-            cryptographer.Key = int.Parse(keyField.Text);
+            cryptographer.SetKey(keyField.Text);
             decryptedText.Text = cryptographer.Encrypt();
         }
         private void Decrypting(object sender, RoutedEventArgs e)
@@ -67,7 +71,7 @@ namespace cryptography
             cryptographer.Text = decryptedText.Text;
             if ((string)DecryptButton.Content == "Decrypt")
             {
-                cryptographer.Key = int.Parse(keyField.Text);
+                cryptographer.SetKey(keyField.Text);
                 encryptedText.Text = cryptographer.Decrypt();
             }
             else
@@ -90,22 +94,22 @@ namespace cryptography
         private void CheckTheKey(object sender, TextChangedEventArgs e)
         {
 
-            if (keyField.Text == "")
+            if (cryptographer.SetKey(keyField.Text))
             {
-                EncryptButton.IsEnabled = false;
-                DecryptButton.IsEnabled = true;
-                DecryptButton.Content = "Attack";
-                return;
+                if (keyField.Text == "")
+                {
+                    EncryptButton.IsEnabled = false;
+                    DecryptButton.IsEnabled = true;
+                    DecryptButton.Content = "Attack";
+                    return;
 
-            }
-            else
-            {
-                DecryptButton.Content = "Decrypt";
-                EncryptButton.IsEnabled = true;
-            }
-            int key;
-            if (int.TryParse(keyField.Text,out key)&&Math.Abs(key)<cryptographer.AlphabetLength)
-            {
+                }
+                else
+                {
+                    DecryptButton.Content = "Decrypt";
+                    EncryptButton.IsEnabled = true;
+                }
+
                 EncryptButton.IsEnabled = true;
                 DecryptButton.IsEnabled = true;
             }
@@ -115,5 +119,18 @@ namespace cryptography
                 DecryptButton.IsEnabled = false;
             }                       
         }
+
+
+
+        private void SetMethod(object sender, SelectionChangedEventArgs e)
+        {
+            string input = methodList.SelectedItem.ToString();
+            if (input == "Cezar")
+                cryptographer = new Cezar();
+            if (input == "Trithemius")
+                cryptographer = new Trithemius();
+        }
+
+
     }
 }

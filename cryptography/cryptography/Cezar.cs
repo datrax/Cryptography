@@ -38,5 +38,16 @@ namespace cryptography
             }
             return answer;
         }
+        public override bool SetKey(string text)
+        {
+            int key;
+            if (text == "") return true;
+            if (int.TryParse(text, out key) && Math.Abs(key) < AlphabetLength)
+            {
+                Key = key;
+                return true;
+            }
+            else return false;
+        }
     }
 }

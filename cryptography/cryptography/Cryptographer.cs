@@ -16,5 +16,8 @@ namespace cryptography
         public abstract string Encrypt();
         public abstract string Decrypt();
 
+
+        public abstract bool SetKey(string text);
+
     }
 }

@@ -1,24 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="cryptography.Cezar">
-    <Position X="3.5" Y="0.75" Width="1.5" />
+  <Class Name="cryptography.Trithemius">
+    <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Cezar.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="cryptography.Cryptographer">
-    <Position X="5.25" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAAQQAAAAAEAAAAAAAAAAAAAACAAAAAA=</HashCode>
-      <FileName>Cryptographer.cs</FileName>
+      <HashCode>AQBAAAAAAAAAAAAQAAgAQAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Trithemius.cs</FileName>
+      <NewMemberFileName>Cezar.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="cryptography.MainWindow">
-    <Position X="7" Y="0.75" Width="1.5" />
+    <Position X="3.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIBAAAAAAAAAAAAAAACQAAAAAAAAAAEAAAAAAABAAAE=</HashCode>
+      <HashCode>AIBAAAAAAAgAAAAAAACQAAAAAAAAAAEAAAAAAABAAAE=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cryptography.Cryptographer">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAAAAAAAAAAAQQAAAAAEAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Cryptographer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
