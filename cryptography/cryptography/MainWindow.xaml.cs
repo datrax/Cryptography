@@ -20,6 +20,7 @@ namespace cryptography
             InitializeComponent();
             methodList.Items.Add("Cezar");
             methodList.Items.Add("Trithemius");
+            methodList.Items.Add("Gamma");
             methodList.SelectedItem = methodList.Items[0];
             
         }
@@ -129,6 +130,8 @@ namespace cryptography
                 cryptographer = new Cezar();
             if (input == "Trithemius")
                 cryptographer = new Trithemius();
+            if (input == "Gamma")
+                cryptographer = new Gamma();
         }
 
 
