@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 
 namespace cryptography
@@ -12,6 +13,7 @@ namespace cryptography
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    internal delegate void del(object sender, EventArgs eventArgs);
     public partial class MainWindow : Window
     {
         Cryptographer cryptographer = new Cezar();
@@ -21,8 +23,8 @@ namespace cryptography
             methodList.Items.Add("Cezar");
             methodList.Items.Add("Trithemius");
             methodList.Items.Add("Gamma");
-            methodList.SelectedItem = methodList.Items[0];
-            
+            methodList.Items.Add("Literature");
+            methodList.SelectedItem = methodList.Items[1];
         }
 
         private void DropDefaultText(object sender, DragEventArgs e)
@@ -36,7 +38,7 @@ namespace cryptography
                     StreamReader re = new StreamReader(file);
                     encryptedText.Text += re.ReadToEnd();
                     re.Close();
-                }       
+                }
             }
         }
 
@@ -54,7 +56,8 @@ namespace cryptography
                 }
             }
         }
-        public void OnDragOver(object sender, DragEventArgs e)
+
+        private void OnDragOver(object sender, DragEventArgs e)
         {
             e.Effects = DragDropEffects.All;
             e.Handled = true;
@@ -83,13 +86,13 @@ namespace cryptography
 
         private void StartAttacking()
         {
-            StringBuilder answer=new StringBuilder();
+            StringBuilder answer = new StringBuilder();
             for (int i = 0; i < cryptographer.AlphabetLength; i++)
             {
                 cryptographer.Key = i;
-                answer.Append(i+": " +cryptographer.Decrypt()+Environment.NewLine);
+                answer.Append(i + ": " + cryptographer.Decrypt() + Environment.NewLine);
             }
-            File.WriteAllText("Temp.txt", answer.ToString(),Encoding.Unicode);
+            File.WriteAllText("Temp.txt", answer.ToString(), Encoding.Unicode);
             Process.Start("Temp.txt");
         }
         private void CheckTheKey(object sender, TextChangedEventArgs e)
@@ -118,9 +121,8 @@ namespace cryptography
             {
                 EncryptButton.IsEnabled = false;
                 DecryptButton.IsEnabled = false;
-            }                       
+            }
         }
-
 
 
         private void SetMethod(object sender, SelectionChangedEventArgs e)
@@ -132,6 +134,19 @@ namespace cryptography
                 cryptographer = new Trithemius();
             if (input == "Gamma")
                 cryptographer = new Gamma();
+            MouseButtonEventHandler mbl = new MouseButtonEventHandler((send, ev) => ((Literature)cryptographer).SetSource(send, ev));
+            MouseButtonEventHandler mbr = new MouseButtonEventHandler((send, ev) => ((Literature)cryptographer).OpenSOurce(send, ev));
+            if (input == "Literature")
+            {
+                cryptographer = new Literature();
+                keyField.PreviewMouseLeftButtonDown += mbl;
+                keyField.PreviewMouseRightButtonDown += mbr;
+            }
+            else
+            {
+                keyField.PreviewMouseLeftButtonDown -= mbl;
+                keyField.PreviewMouseRightButtonDown -= mbr;
+            }
         }
 
 
