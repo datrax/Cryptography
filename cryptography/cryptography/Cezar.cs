@@ -11,7 +11,7 @@ namespace cryptography
         public Cezar() { }
         public Cezar(int Key)
         {
-            this.Key = Key;
+            this.Key = Key.ToString();
         }
         public Cezar(int Key,string Text)
             :this(Key)
@@ -24,7 +24,7 @@ namespace cryptography
             string answer = "";
             foreach (char symbol in Text)
             {
-                answer += (char)(((int)symbol + Key+AlphabetLength) % AlphabetLength);
+                answer += (char)(((int)symbol + int.Parse(Key)+AlphabetLength) % AlphabetLength);
             }
             return answer;
 
@@ -34,7 +34,7 @@ namespace cryptography
             string answer="";
             foreach (char symbol in Text)
             {
-                answer += (char)(((int)symbol - Key + AlphabetLength) % AlphabetLength);
+                answer += (char)(((int)symbol - int.Parse(Key) + AlphabetLength) % AlphabetLength);
             }
             return answer;
         }
@@ -44,7 +44,7 @@ namespace cryptography
             if (text == "") return true;
             if (int.TryParse(text, out key) && Math.Abs(key) < AlphabetLength)
             {
-                Key = key;
+                Key = key.ToString();
                 return true;
             }
             else return false;

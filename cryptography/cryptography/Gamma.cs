@@ -11,7 +11,7 @@ namespace cryptography
         public Gamma() { }
         public Gamma(int Key)
         {
-            this.Key = Key;
+            this.Key = Key.ToString();
         }
         public Gamma(int Key, string Text)
             : this(Key)
@@ -22,7 +22,7 @@ namespace cryptography
         public override string Encrypt()
         {
             string answer = "";
-            Random random = new Random(Key);
+            Random random = new Random(int.Parse(Key));
             foreach (char symbol in Text)
             {                
                 int key = random.Next(AlphabetLength) ^ (int)symbol;
@@ -42,7 +42,7 @@ namespace cryptography
             if (text == "") return false;
             if (int.TryParse(text, out key) && Math.Abs(key) < AlphabetLength)
             {
-                Key = key;
+                Key = key.ToString();
                 return true;
             }
             else return false;

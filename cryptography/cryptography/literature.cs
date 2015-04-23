@@ -92,7 +92,7 @@ namespace cryptography
             path = dlg.FileName;
             ((TextBox)sender).Text = path;
         }
-        public void OpenSOurce(object sender, EventArgs eventArgs)
+        public void OpenSource(object sender, EventArgs eventArgs)
         {
             try
             {

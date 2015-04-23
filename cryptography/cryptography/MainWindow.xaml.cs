@@ -24,6 +24,7 @@ namespace cryptography
             methodList.Items.Add("Trithemius");
             methodList.Items.Add("Gamma");
             methodList.Items.Add("Literature");
+            methodList.Items.Add("DES");
             methodList.SelectedItem = methodList.Items[1];
         }
 
@@ -87,9 +88,9 @@ namespace cryptography
         private void StartAttacking()
         {
             StringBuilder answer = new StringBuilder();
-            for (int i = 0; i < cryptographer.AlphabetLength; i++)
+            for (int i = 0; i < Cryptographer.AlphabetLength; i++)
             {
-                cryptographer.Key = i;
+                cryptographer.Key = i.ToString();
                 answer.Append(i + ": " + cryptographer.Decrypt() + Environment.NewLine);
             }
             File.WriteAllText("Temp.txt", answer.ToString(), Encoding.Unicode);
@@ -134,8 +135,18 @@ namespace cryptography
                 cryptographer = new Trithemius();
             if (input == "Gamma")
                 cryptographer = new Gamma();
+            MouseButtonEventHandler mbll = new MouseButtonEventHandler((send, ev) => ((DEScrypt)cryptographer).OpenLeftText(send, ev));
+            if (input == "DES")
+            {
+                decryptedText.PreviewMouseLeftButtonDown += mbll;
+                cryptographer = new DEScrypt();
+            }
+            else
+            {
+                decryptedText.PreviewMouseLeftButtonDown -= mbll;
+            }
             MouseButtonEventHandler mbl = new MouseButtonEventHandler((send, ev) => ((Literature)cryptographer).SetSource(send, ev));
-            MouseButtonEventHandler mbr = new MouseButtonEventHandler((send, ev) => ((Literature)cryptographer).OpenSOurce(send, ev));
+            MouseButtonEventHandler mbr = new MouseButtonEventHandler((send, ev) => ((Literature)cryptographer).OpenSource(send, ev));
             if (input == "Literature")
             {
                 cryptographer = new Literature();

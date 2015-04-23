@@ -1,15 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="cryptography.Trithemius">
-    <Position X="5.25" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AQBAAAAAAAAAAAAQAAgAQAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
-      <FileName>Trithemius.cs</FileName>
-      <NewMemberFileName>Cezar.cs</NewMemberFileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="cryptography.MainWindow">
-    <Position X="3.5" Y="1.75" Width="1.5" />
+    <Position X="3.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIBAAAAAAAgAAAAAAACQAAAAAAAAAAEAAAAAAABAAAE=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
@@ -20,6 +12,13 @@
     <TypeIdentifier>
       <HashCode>AQBAAAAAAAAAAAQQAAAAAEAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Cryptographer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="cryptography.DEScrypt">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>DEScrypt.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

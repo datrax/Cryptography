@@ -14,7 +14,7 @@ namespace cryptography
         public Trithemius() { }
         public Trithemius(int Key)
         {
-            this.Key = Key;
+            this.Key = Key.ToString();
         }
         public Trithemius(int Key, string Text)
             : this(Key)
@@ -29,7 +29,7 @@ namespace cryptography
             foreach (char symbol in Text)
             {
                 if (!UpdateKey(t++)) return "";
-                answer += (char)(((int)symbol + Key + AlphabetLength) % AlphabetLength);
+                answer += (char)(((int)symbol + int.Parse(Key) + AlphabetLength) % AlphabetLength);
             }
             return answer;
 
@@ -43,7 +43,7 @@ namespace cryptography
             foreach (char symbol in Text)
             {
                 if (!UpdateKey(t++)) return "";
-                answer += (char)(((int)symbol - Key + AlphabetLength) % AlphabetLength);
+                answer += (char)(((int)symbol - int.Parse(Key) + AlphabetLength) % AlphabetLength);
             }
             return answer;
         }
@@ -68,7 +68,7 @@ namespace cryptography
                     }
                 }
             }
-            Key = (int)key % AlphabetLength;
+            Key = ((int)key % AlphabetLength).ToString();
             return true;
         }
         public override bool SetKey(string text)
