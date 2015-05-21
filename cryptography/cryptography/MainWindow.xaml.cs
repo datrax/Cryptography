@@ -6,6 +6,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using crypt6;
 
 
 namespace cryptography
@@ -25,6 +26,7 @@ namespace cryptography
             methodList.Items.Add("Gamma");
             methodList.Items.Add("Literature");
             methodList.Items.Add("DES");
+            methodList.Items.Add("Backpack");
             methodList.SelectedItem = methodList.Items[1];
         }
 
@@ -147,6 +149,7 @@ namespace cryptography
             }
             MouseButtonEventHandler mbl = new MouseButtonEventHandler((send, ev) => ((Literature)cryptographer).SetSource(send, ev));
             MouseButtonEventHandler mbr = new MouseButtonEventHandler((send, ev) => ((Literature)cryptographer).OpenSource(send, ev));
+            MouseButtonEventHandler mbrr = new MouseButtonEventHandler((send, ev) => ((Backpack)cryptographer).GetPublicKey(send, ev));
             if (input == "Literature")
             {
                 cryptographer = new Literature();
@@ -157,6 +160,15 @@ namespace cryptography
             {
                 keyField.PreviewMouseLeftButtonDown -= mbl;
                 keyField.PreviewMouseRightButtonDown -= mbr;
+            }
+            if (input == "Backpack")
+            {
+                keyField.PreviewMouseRightButtonDown += mbrr;
+                cryptographer = new Backpack();
+            }
+            else
+            {
+                keyField.PreviewMouseRightButtonDown -= mbrr;
             }
         }
 

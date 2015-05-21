@@ -53,6 +53,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Backpack.cs" />
     <Compile Include="DEScrypt.cs" />
     <Compile Include="Gamma.cs" />
     <Compile Include="Literature.cs" />

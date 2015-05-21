@@ -14,11 +14,11 @@
       <FileName>Cryptographer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="cryptography.DEScrypt">
+  <Class Name="crypt6.Backpack">
     <Position X="5.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQBAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
-      <FileName>DEScrypt.cs</FileName>
+      <HashCode>AQBAAAAAAAEAAAAQAAAEAABCAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Backpack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
