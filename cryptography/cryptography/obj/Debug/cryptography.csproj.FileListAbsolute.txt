@@ -40,3 +40,7 @@ C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debu
 C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\cryptography.Properties.Resources.resources
 C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\cryptography.csproj.GenerateResource.Cache
 C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\bin\Debug\cryptography.pdb
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\PublicSequence.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\PublicSequence.g.cs
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\DiffHelmanKeys.baml
+C:\Users\datrax\Documents\GitHub\Cryptography\cryptography\cryptography\obj\Debug\DiffHelmanKeys.g.cs

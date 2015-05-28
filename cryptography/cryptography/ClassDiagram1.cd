@@ -14,7 +14,7 @@
       <FileName>Cryptographer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="crypt6.Backpack">
+  <Class Name="cryptography.Backpack">
     <Position X="5.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQBAAAAAAAEAAAAQAAAEAABCAAAAAAAAAAAAAAAAAAA=</HashCode>

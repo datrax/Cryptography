@@ -13,7 +13,7 @@
         <TextBox x:Name="keyField" HorizontalAlignment="Left" Height="23" Margin="175,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" SpellCheck.IsEnabled="True" Text="1" TextChanged="CheckTheKey"/>
         <Label Content="Default text:" HorizontalAlignment="Left" Margin="47,37,0,0" VerticalAlignment="Top" Width="147"/>
         <Label Content="Encoded text:" HorizontalAlignment="Left" Margin="308,38,0,0" VerticalAlignment="Top" Width="147"/>
-        <Label Content="Key:" HorizontalAlignment="Left" Margin="138,231,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="keyLabel" Content="Key:" HorizontalAlignment="Left" Margin="138,231,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="methodList" HorizontalAlignment="Left" Margin="195,11,0,0" VerticalAlignment="Top" Width="182" SelectionChanged="SetMethod"/>
         <Label Content="Encryption method:" HorizontalAlignment="Left" Margin="79,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.536,0.438" Height="21" Width="116"/>
 

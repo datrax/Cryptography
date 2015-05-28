@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
-using cryptography;
 
-namespace crypt6
+namespace cryptography
 {
     public class Backpack : Cryptographer
     {
@@ -105,15 +101,7 @@ namespace crypt6
             return v;
         }
 
-        private int[] PublicSequence(int t, int m, int[] sequence)
-        {
-            var answer = new int[sequence.Length];
-            for (int i = 0; i < answer.Length; i++)
-            {
-                answer[i] = (t * sequence[i]) % m;
-            }
-            return answer;
-        }
+
 
         public override bool SetKey(string text)
         {
@@ -151,14 +139,7 @@ namespace crypt6
 
         public void GetPublicKey(object send, System.Windows.Input.MouseButtonEventArgs ev)
         {
-
-            int[] publicKey = PublicSequence(key[1], key[0], key.GetRange(2, key.Count - 2).ToArray());
-            string text = "";
-            for (int i = 0; i < publicKey.Length; i++)
-            {
-                text += publicKey[i] + " ";
-            }
-            ((TextBox)send).Text = text;
+   
         }
     }
 }

@@ -53,11 +53,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AESDiff.cs" />
     <Compile Include="Backpack.cs" />
     <Compile Include="DEScrypt.cs" />
     <Compile Include="Gamma.cs" />
     <Compile Include="Literature.cs" />
+    <Compile Include="PublicSequence.xaml.cs">
+      <DependentUpon>PublicSequence.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Trithemius.cs" />
+    <Compile Include="DiffHelmanKeys.xaml.cs">
+      <DependentUpon>DiffHelmanKeys.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,6 +79,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PublicSequence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\BureauBlack.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,6 +110,10 @@
     <Page Include="Themes\WhistlerBlue.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DiffHelmanKeys.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="cryptography.PublicSequence"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PublicSequence" Height="146" Width="371" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" ResizeMode="CanMinimize" >
+    <Grid>
+        <Button Content="Generate public sequence" HorizontalAlignment="Left" Margin="104,48,0,0" VerticalAlignment="Top" Width="149" Click="GenerateSequence"/>
+        <TextBox x:Name="m" HorizontalAlignment="Left" Height="23" Margin="27,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39"/>
+        <TextBox x:Name="t" HorizontalAlignment="Left" Height="23" Margin="91,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34"/>
+        <TextBox x:Name="sequence" HorizontalAlignment="Left" Height="23" Margin="192,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="newSequence" HorizontalAlignment="Left" Height="23" Margin="10,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="335"/>
+        <Label Content="m:" HorizontalAlignment="Left" Margin="8,15,0,0" VerticalAlignment="Top"/>
+        <Label Content="t:" HorizontalAlignment="Left" Margin="76,15,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sequence:" HorizontalAlignment="Left" Margin="130,15,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

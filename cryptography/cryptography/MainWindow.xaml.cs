@@ -6,7 +6,6 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using crypt6;
 
 
 namespace cryptography
@@ -27,6 +26,7 @@ namespace cryptography
             methodList.Items.Add("Literature");
             methodList.Items.Add("DES");
             methodList.Items.Add("Backpack");
+            methodList.Items.Add("DiffHelman");
             methodList.SelectedItem = methodList.Items[1];
         }
 
@@ -161,14 +161,35 @@ namespace cryptography
                 keyField.PreviewMouseLeftButtonDown -= mbl;
                 keyField.PreviewMouseRightButtonDown -= mbr;
             }
+       
             if (input == "Backpack")
             {
-                keyField.PreviewMouseRightButtonDown += mbrr;
+                PublicSequence window = new PublicSequence();
+                window.Owner = this;
+                window.Show(); 
+                keyLabel.PreviewMouseLeftButtonDown += mbrr;
                 cryptographer = new Backpack();
             }
             else
             {
-                keyField.PreviewMouseRightButtonDown -= mbrr;
+                keyLabel.PreviewMouseLeftButtonDown -= mbrr;
+            }
+            MouseButtonEventHandler mblll = new MouseButtonEventHandler((send, ev) => ((AESDiff)cryptographer).OpenLeftText(send, ev));
+         /*   MouseButtonEventHandler mbrrr = new MouseButtonEventHandler((send, ev) => ((AESDiff)cryptographer).ShowKeys(send, ev));
+            MouseButtonEventHandler mbmmm = new MouseButtonEventHandler((send, ev) => ((AESDiff)cryptographer).ShowKeyFromFIle(send, ev));*/
+            if (input == "DiffHelman")
+            {
+                decryptedText.PreviewMouseLeftButtonDown += mblll;
+             /*   keyLabel.PreviewMouseLeftButtonDown += mbrrr;
+                keyField.PreviewMouseLeftButtonDown += mbmmm;*/
+                cryptographer = new AESDiff();
+                keyField.Text =  " ";
+            }
+            else
+            {
+                decryptedText.PreviewMouseLeftButtonDown -= mblll;
+           /*     keyLabel.PreviewMouseLeftButtonDown -= mbrrr;
+                keyField.PreviewMouseLeftButtonDown -= mbmmm;*/
             }
         }
 
